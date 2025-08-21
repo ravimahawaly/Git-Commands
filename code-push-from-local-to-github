@@ -1,0 +1,63 @@
+How to Push Code from your Server's local repo to Github Repo
+=============================================================================================================================
+Create a Public/Private Repo at Github without ReadMe.md and .gitignore files
+Commands to Run at your server:
+git init  ==> initializing the git repo
+
+git status
+
+git branch
+
+git add .
+
+git config --global user.name "username"  ==> To set user for all Repositories on a server
+
+git config --global user.email "your.email@example.com"   ==> This will work if above command will not work.
+
+git config user.name "username" ==> To set user for that particular directory (Repo).
+
+git config user.email "your.email@example.com"
+
+git commit -m "Initial Commit"
+
+git branch -M main
+
+git branch
+
+git remote add origin https://github.com/ravimahawaly/Git-Commands.git
+
+git remote -v
+
+git push -u origin main ==> Your code is pushed to the Main branch at Github.
+
+====================================================================================================================================
+
+Alternatice Method:
+====================================================================================================================================
+
+1.  Create a Private/Public repo at github.
+2.  Clone the Repo in your Directory at server.
+3.  git remote -v                                   ==> You will see your push and pull Url
+
+If Push Url is not visible, then you need to run this command 4 to add push origin else there is no need to run this command if you can see push Url.
+
+4.  git remote add origin https://github.com/ravimahawaly/Git-Commands.git
+5.  git branch -M main   ==> changing branch from master to main
+6.  git push -u origin main
+
+==> How to remove GitHub repo remote and the Git user.email from your server. 
+
+1.  git remote -v
+2.  git remote remove origin
+3.  git remote -v
+Now to Remove username and user email
+4.  git config --list --show-origin  ==> To list username and user email
+
+   ==> If you set them globally (applies to all repos on this server)
+5.  git config --global --unset user.email
+6.  git config --global --unset user.name
+  ==> If you set them locally (only for this repo):
+7. cd ~/project-dos-canvas   ==> In your Repo Directory where you set them
+8.  git config --unset user.email
+9.  git config --unset user.name
+10.  git config --list --show-origin  ==> You will nothing now
