@@ -1,35 +1,47 @@
 How to Push Code from your Server's local repo to Github Repo
 =============================================================================================================================
 Create a Public/Private Repo at Github without ReadMe.md and .gitignore files
+
 Commands to Run at your server:
-git init  ==> initializing the git repo
+==========================================================================================
+Steps: Init git in a directory ==> git add . ==> git commit ==> git branch -M main  ==> add remote(github) repo  ==> git push
+Now for other branches in same Repo:
+### push   = remove files == checkout new branch  = copy files = add = commit = push
+==> after pushing main branch code ==> rm -rf *  ==> checkout new branch (git checkout -b dev)  ==> copy files of your dev branch code
+  ==> git add . ==> commit changes  ==> push (git push -u origin dev)
 
-git status
+#   mkdir /github
+#   cd /github
+#   git init  ==> initializing the git repo
+#   git status
+#   git branch
+#   git add .
+#   git config --global user.name "username"  ==> To set user for all Repositories on a server
+#   git config --global user.email "your.email@example.com"   ==> This will work if above command will not work.
+#   git config user.name "username" ==> To set user for that particular directory (Repo).
+#   git config user.email "your.email@example.com"
+#   git commit -m "Initial Commit"
+#   git branch -M main
+#   git branch
+#   git remote add origin https://github.com/ravimahawaly/Git-Commands.git
+#   git remote -v
+#   git push -u origin main ==> Your code is pushed to the Main branch at Github. Check on Github
 
-git branch
+Now if you want to push your dev and uat branch code to the same repo, then follow these commands just after above command 
 
-git add .
+#   git branch
+#   git status
+#   rm -rf *
+#   git checkout -b dev
+#   git branch
+#   cp -r /home/ravi/dev-code/* ./
+#   git status    ==> don't confuse if you see deleted files of main branch, just leave it and run following commands
+#   git add .
+#   git commit -m "Commit message"
+#   git remote -v
+#   git push -u origin dev   ==> check at github, new branch with dev is created and code is pushed to it.
 
-git config --global user.name "username"  ==> To set user for all Repositories on a server
-
-git config --global user.email "your.email@example.com"   ==> This will work if above command will not work.
-
-git config user.name "username" ==> To set user for that particular directory (Repo).
-
-git config user.email "your.email@example.com"
-
-git commit -m "Initial Commit"
-
-git branch -M main
-
-git branch
-
-git remote add origin https://github.com/ravimahawaly/Git-Commands.git
-
-git remote -v
-
-git push -u origin main ==> Your code is pushed to the Main branch at Github.
-
+Now follow same process if you have uat branch also.
 ====================================================================================================================================
 
 Alternatice Method:
