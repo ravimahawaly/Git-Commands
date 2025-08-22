@@ -3,7 +3,7 @@ How to fetch repo from GitHub to your Local Server
 mkdir /git-repo
 cd /git-repo
 git init
-git remote add origin https://github.com/ravimahawaly/dos-canvas-backend.git  ==> To add remote Repository
+git remote add origin https://github.com/ravimahawaly/Git-Commands.git  ==> To add remote Repository
 git branch
 git fetch origin   ==> to fetch all branches of this remote Repo
 git branch -r      ==> to check all available branches
@@ -16,7 +16,7 @@ Pull Command Examples
 mkdir /git-pull-examples
 cd /git-pull-examples
 git init
-git remote add origin https://github.com/ravimahawaly/dos-canvas-backend.git
+git remote add origin https://github.com/ravimahawaly/Git-Commands.git
 git remote -v
 git pull origin dev  ==> It will pull the code from dev branch to master branch locally
 git branch ==> You will see you're on master branch but code is pulled from dev branch
