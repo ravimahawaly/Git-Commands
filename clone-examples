@@ -1,0 +1,8 @@
+Git Clone Examples
+================================================================
+#  git clone https://github.com/ravimahawaly/dos-canvas-frontend.git
+    ==> If you clone a repo at your local server using this command then it will clone main branch by default.
+
+To clone other brnaches:
+#  git clone -b dev https://github.com/ravimahawaly/dos-canvas-frontend.git
+    ==> This command will clone the dev branch code to your local server
