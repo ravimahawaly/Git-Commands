@@ -1,0 +1,19 @@
+How to remove remote origin:
+==> How to remove GitHub repo remote and the Git user.email from your server. 
+
+1.  git remote -v
+2.  git remote remove origin
+3.  git remote -v
+
+Now to Remove username and user email
+===========================================================================
+4.  git config --list --show-origin  ==> To list username and user email
+
+   ==> If you set them globally (applies to all repos on this server)
+5.  git config --global --unset user.email
+6.  git config --global --unset user.name
+  ==> If you set them locally (only for this repo):
+7. cd ~/project-dos-canvas   ==> In your Repo Directory where you set them
+8.  git config --unset user.email
+9.  git config --unset user.name
+10.  git config --list --show-origin  ==> You will nothing now
