@@ -1,0 +1,9 @@
+How to clone a particular branch if you have multiple branches in your Repository:
+==============================================================================================
+In this I have cloned the dev branch from my repo which contains (main, dev and uat) branches.
+
+#  git clone --branch dev --single-branch https://github.com/username/Repo-name.git
+
+Explanation:
+  --branch dev: This flag tells Git which branch you want to be active (or "checked out") immediately after the clone is complete.
+  --single-branch: This is an efficiency flag. It instructs Git to download the history of only the branch specified by the --branch flag (in this case, dev).
